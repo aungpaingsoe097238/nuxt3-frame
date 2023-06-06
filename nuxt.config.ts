@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   modules: ["@pinia/nuxt"],
   plugins: [
     '~/plugins/axios',
-    '~/plugins/utli'
+    '~/plugins/utli',
+    '~/plugins/wrapper'
   ],
   runtimeConfig: {
     public: {
