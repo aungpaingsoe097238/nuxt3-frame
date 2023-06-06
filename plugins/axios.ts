@@ -1,17 +1,17 @@
 import axios from "axios";
 
 export default defineNuxtPlugin(() => {
+
   const config = useRuntimeConfig();
   const baseUrl = config.public.apiBase;
   axios.defaults.headers.common['Authorization'] = `Bearer 9|08sRedxRSYZyRGzNZKmzjdjmcNyUJ8HWPMJOCOdy`;
 
   return {
     provide: {
-
       // fetch data 
       fetchData: async (uri: string) => {
         try {
-          const response = await axios.get(`${baseUrl}/${uri}` );
+          const response = await axios.get(`${baseUrl}/${uri}`);
           return response.data;
         } catch (error: any) {
           return error.response.data; 
