@@ -2,11 +2,12 @@
 export default defineNuxtConfig({
   modules: ["@pinia/nuxt"],
   plugins: [
-    '~/plugins/axios'
+    '~/plugins/axios',
   ],
   runtimeConfig: {
     public: {
       apiBase : process.env.API_BASE
     }
-  }
+  },
+  
 });
