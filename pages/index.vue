@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div></div>
+  <div>
+    <button @click="handleShowAlert">show alert</button>
+  </div>
 </template>
