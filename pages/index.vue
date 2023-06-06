@@ -1,14 +1,22 @@
 <script setup>
-import axios from "axios";
+const { $fetchData, $postData, $updateData, $deleteData } = useNuxtApp()
 
-const { $fetchData, $postData } = useNuxtApp()
-const config = useRuntimeConfig();
+const handleCreate = () => {
+  let data = $deleteData('state',1,{
+    name : 'state update'
+  })
+  console.log(data)
+} 
 
-console.log($fetchData('state'))
-
+onMounted(() => {
+  let data = $fetchData('state')
+  console.log(data);
+})
 
 </script>
 
 <template>
-  <div>Hello Vue</div>
+  <div>
+    <button @click="handleCreate">post</button>
+  </div>
 </template>
